@@ -1,4 +1,7 @@
 #!/bin/bash
-aws ec2 create-vpc \
-    --cidr-block 10.0.0.0/16 \
-    --tag-specification ResourceType=vpc,Tags=[{Key=Name,Value=MyVpc}]
+"aws_vpc" "my_vpc" {
+    cidr_block = "192.168.0.0/16"
+    tags = {
+      "Name" = "myvpcfromtf"
+    }
+}
