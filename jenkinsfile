@@ -1,5 +1,5 @@
 pipeline{
-    agent {label 'python'
+    agent {  label 'python'
     }
     stages{
         stage('clone'){
@@ -13,5 +13,5 @@ pipeline{
             sh 'awscli.sh'
         }
     }
-    }
+}
 }
