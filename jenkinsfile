@@ -3,12 +3,14 @@ pipeline{
     }
     stages{
         stage('clone'){
+            steps{
             git branch: 'main'
             url: 'https://github.com/rohi3369/shellscript.git'
         }
+        }
         stage('build'){
-            sh 'awscli.sh'
+           steps{ sh 'awscli.sh'
         }
     }
-
+    }
 }
