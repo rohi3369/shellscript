@@ -1,5 +1,5 @@
 pipeline{
-    agent {  label 'python'
+    agent {  label 'tox'
     }
     stages{
         stage('clone'){
