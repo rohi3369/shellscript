@@ -17,7 +17,7 @@ pipeline{
     echo "Creating Public Subnet..." 
    SUBNET_PUBLIC_ID= $(aws ec2 create-subnet \
   --vpc-id $VPC_ID \
-  --cidr-block $SUBNET_PUBLIC_CIDR \
+  --cidr-block '10.0.1.0/24 \
   --availability-zone $SUBNET_PUBLIC_AZ \
   --query 'Subnet.{SubnetId:SubnetId}' \
   --output text \
