@@ -4,8 +4,8 @@ pipeline{
     stages{
         stage('clone'){
             steps{
-            git url: 'https://github.com/rohi3369/shellscript.git'
-             branch: 'main'
+                   git url: 'https://github.com/rohi3369/shellscript.git',
+                     branch: 'main'
         }
         }
         stage('build'){
