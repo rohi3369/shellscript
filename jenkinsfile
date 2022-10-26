@@ -1,0 +1,14 @@
+pipeline{
+    agent {label 'python'
+    }
+    stages{
+        stage{
+            git branch: 'main'
+            url: 'https://github.com/rohi3369/shellscript.git'
+        }
+        stage{
+            sh 'awscli.sh'
+        }
+    }
+
+}
