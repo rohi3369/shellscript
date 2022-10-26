@@ -2,11 +2,11 @@ pipeline{
     agent {label 'python'
     }
     stages{
-        stage{
+        stage('clone'){
             git branch: 'main'
             url: 'https://github.com/rohi3369/shellscript.git'
         }
-        stage{
+        stage('build'){
             sh 'awscli.sh'
         }
     }
